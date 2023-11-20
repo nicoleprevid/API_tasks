@@ -1,5 +1,5 @@
 # API_task
-*Este projeto é uma aplicação simples de To-Do List desenvolvida com Node.js e Express. Ele utiliza o MongoDB como banco de dados para armazenar as tarefas.
+Este projeto é uma aplicação simples de To-Do List desenvolvida com Node.js e Express. Ele utiliza o MongoDB como banco de dados para armazenar as tarefas.
 
 ## Pré-requisitos
 
@@ -9,33 +9,35 @@ Antes de começar, certifique-se de ter o Node.js e o npm instalados no seu sist
 
 1. Clone este repositório:
 ```bash
-   git clone https://github.com/nicoleprevid/api_task
+git clone https://github.com/nicoleprevid/api_task
 Navegue até o diretório do projeto:
+```
 
 2. Navegue até o diretório do projeto:
-``` bash
+```bash
 cd nome-do-projeto
-Instale as dependências:
+```
 
 3.Instale as dependências:
 ```bash
-npm install
-Crie um arquivo .env na raiz do projeto e adicione a string de conexão MongoDB:
+npm install```
 
 4.Crie um arquivo .env na raiz do projeto e adicione a string de conexão MongoDB:
 ```env
 MONGODB_URI=sua-string-de-conexao-mongodb
-Executando o Projeto
-Para iniciar o servidor, execute o seguinte comando:
+ ```
 
-##Executando o Projeto
+## Executando o Projeto
+
 5.Para iniciar o servidor, execute o seguinte comando:
 ```bash
 npm start
 O servidor estará acessível em http://localhost:3000 por padrão.
+```
 
-##Endpoints da API
-#Adicionar Tarefa
+## Endpoints da API
+
+# Adicionar Tarefa
 Método: POST
 Endpoint: /todos
 Corpo da Requisição:
@@ -43,12 +45,13 @@ Corpo da Requisição:
 {
   "task": "Descrição da tarefa"
 }
+```
 
-#Listar Todas as Tarefas
+# Listar Todas as Tarefas
 Método: GET
 Endpoint: /todos
 
-#Atualizar Tarefa
+# Atualizar Tarefa
 Método: PUT
 Endpoint: /todos/:id
 Corpo da Requisição:
@@ -56,7 +59,7 @@ Corpo da Requisição:
 {
   "completed": true
 }
-
-#Excluir Tarefa
+```
+# Excluir Tarefa
 Método: DELETE
 Endpoint: /todos/:id
