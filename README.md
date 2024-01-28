@@ -20,7 +20,8 @@ cd nome-do-projeto
 
 3.Instale as dependências:
 ```bash
-npm install```
+npm install
+```
 
 4.Crie um arquivo .env na raiz do projeto e adicione a string de conexão MongoDB:
 ```env
