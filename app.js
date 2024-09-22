@@ -6,6 +6,12 @@ require('dotenv').config();
 const app = express();
 const port =  25000
 
+const cors = require('cors');
+app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000' // permite apenas a origem do seu frontend
+}));
+
 // Middleware de análise de solicitações JSON
 app.use(express.json());
 const banco = "mongodb+srv://nickprevid:1234@cluster0.09n1s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
