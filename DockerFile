@@ -1,20 +1,14 @@
-# Use uma imagem base do Node.js
-FROM node:14
 
-# Defina o diretório de trabalho dentro do container
+FROM node:lts-alpine
+
 WORKDIR /app
 
-# Copie os arquivos package.json e package-lock.json para instalar dependências
 COPY package*.json ./
 
-# Instale as dependências
 RUN npm install
 
-# Copie o resto dos arquivos para dentro do container
 COPY . .
 
-# Exponha a porta 25000
 EXPOSE 25000
 
-# Comando para rodar a aplicação
 CMD ["npm", "start"]
