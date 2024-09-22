@@ -4,13 +4,14 @@ const todoRoutes = require('./routes/todoRoutes');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port =  25000
 
 // Middleware de análise de solicitações JSON
 app.use(express.json());
+const banco = "mongodb+srv://nickprevid:1234@cluster0.09n1s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 console.log('Conectando ao banco de dados...');
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(banco, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Conectado ao banco de dados!');
   })

@@ -32,8 +32,8 @@ MONGODB_URI=sua-string-de-conexao-mongodb
 
 5.Para iniciar o servidor, execute o seguinte comando:
 ```bash
-npm start
-O servidor estará acessível em http://localhost:3000 por padrão.
+node app.js
+O servidor estará acessível em http://localhost:25000 por padrão.
 ```
 
 ## Endpoints da API
@@ -44,17 +44,19 @@ Endpoint: /todos
 Corpo da Requisição:
 ```json
 {
-  "task": "Descrição da tarefa"
+  "task": "Estudar MongoDB",
+  "completed": false
 }
+
 ```
 
 # Listar Todas as Tarefas
 Método: GET
-Endpoint: /todos
+Endpoint: api/todos
 
 # Atualizar Tarefa
 Método: PUT
-Endpoint: /todos/:id
+Endpoint: api/todos/:id
 Corpo da Requisição:
 ```json
 {
